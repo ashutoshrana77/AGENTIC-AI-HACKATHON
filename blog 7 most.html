@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 Most Beautiful Places of India — Travel Blog</title>
+<meta name="description" content="From Himalayan lakes to tropical beaches — discover India's most stunning destinations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sand:#f6f1e6;
+    --sand-deep:#eee5d2;
+    --ink:#211d17;
+    --ink-soft:#5b5449;
+    --teal:#1f6f72;
+    --teal-deep:#134d50;
+    --marigold:#e0932b;
+    --line:#ded4bd;
+    --white:#fffdf9;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:'Public Sans',system-ui,-apple-system,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  h1,h2,h3{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    line-height:1.12;
+    margin:0 0 .4em;
+    color:var(--ink);
+  }
+  a{color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,241,230,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:.01em;text-decoration:none;color:var(--ink);}
+  .brand span{color:var(--teal);}
+  nav.primary ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;}
+  nav.primary a{text-decoration:none;font-size:.95rem;font-weight:500;color:var(--ink-soft);border-bottom:2px solid transparent;padding-bottom:4px;transition:color .2s,border-color .2s;}
+  nav.primary a:hover,nav.primary a:focus-visible{color:var(--teal-deep);border-color:var(--marigold);}
+  .menu-btn{display:none;background:none;border:1px solid var(--ink);border-radius:var(--radius);width:42px;height:38px;cursor:pointer;position:relative;}
+  .menu-btn span,.menu-btn::before,.menu-btn::after{content:"";position:absolute;left:10px;right:10px;height:2px;background:var(--ink);}
+  .menu-btn::before{top:13px;}
+  .menu-btn span{top:18px;}
+  .menu-btn::after{top:23px;}
+
+  /* Hero */
+  .hero{
+    padding:88px 0 64px;
+    background:
+      radial-gradient(ellipse at top right, rgba(31,111,114,.12), transparent 55%),
+      radial-gradient(ellipse at bottom left, rgba(224,147,43,.14), transparent 50%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero .eyebrow{color:var(--teal-deep);font-weight:600;letter-spacing:.03em;font-size:.85rem;margin-bottom:14px;}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);max-width:14ch;}
+  .hero p.sub{font-size:1.15rem;color:var(--ink-soft);max-width:46ch;margin:18px 0 0;}
+  .hero .places-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;}
+  .hero .places-strip a{
+    font-size:.82rem;padding:7px 14px;border:1px solid var(--line);border-radius:20px;
+    text-decoration:none;color:var(--ink-soft);background:var(--white);transition:border-color .2s,color .2s;
+  }
+  .hero .places-strip a:hover{border-color:var(--teal);color:var(--teal-deep);}
+
+  .intro{padding:52px 0 8px;}
+  .intro p{font-size:1.05rem;max-width:68ch;color:var(--ink-soft);}
+
+  /* Place sections */
+  .place{padding:64px 0;border-bottom:1px solid var(--line);}
+  .place:last-of-type{border-bottom:none;}
+  .place-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;}
+  .place:nth-of-type(even) .place-grid{direction:rtl;}
+  .place:nth-of-type(even) .place-grid > *{direction:ltr;}
+  .place-media img{width:100%;height:420px;object-fit:cover;border-radius:var(--radius);}
+  .place-media .gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;}
+  .place-media .gallery div{height:96px;background:var(--sand-deep);border-radius:var(--radius);overflow:hidden;}
+  .place-media .gallery img{height:100%;object-fit:cover;}
+  .place-loc{font-size:.85rem;font-weight:600;color:var(--teal-deep);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
+  .place h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:16px;}
+  .place-body p{margin:0 0 14px;color:var(--ink-soft);}
+  .place-body p strong{color:var(--ink);font-weight:600;}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line);}
+  .facts h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--marigold);font-weight:700;margin-bottom:6px;font-family:'Public Sans',sans-serif;}
+  .facts p{margin:0;font-size:.92rem;color:var(--ink-soft);}
+
+  /* Footer */
+  footer{background:var(--teal-deep);color:var(--sand);padding:44px 0;}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;}
+  footer p{margin:0;font-size:.95rem;}
+  footer a{text-decoration:underline;text-decoration-color:rgba(246,241,230,.4);text-underline-offset:3px;}
+  footer a:hover{text-decoration-color:var(--marigold);}
+
+  @media (max-width:860px){
+    nav.primary{position:fixed;inset:64px 0 auto 0;background:var(--white);border-bottom:1px solid var(--line);padding:12px 24px 20px;transform:translateY(-120%);opacity:0;transition:transform .25s ease,opacity .25s ease;}
+    nav.primary.open{transform:translateY(0);opacity:1;}
+    nav.primary ul{flex-direction:column;gap:4px;}
+    nav.primary a{display:block;padding:10px 4px;}
+    .menu-btn{display:block;}
+    .place-grid,.place:nth-of-type(even) .place-grid{grid-template-columns:1fr;direction:ltr;}
+    .place-media img{height:260px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row wrap">
+    <a href="#top" class="brand">Bharat<span>Trails</span></a>
+    <nav class="primary" id="primaryNav">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#places">Places</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="primaryNav"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">A Travel Blog</p>
+      <h1>7 Most Beautiful Places of India</h1>
+      <p class="sub">From Himalayan lakes to tropical beaches – discover India's most stunning destinations.</p>
+      <div class="places-strip">
+        <a href="#kashmir">Kashmir Valley</a>
+        <a href="#ladakh">Ladakh</a>
+        <a href="#kerala">Kerala Backwaters</a>
+        <a href="#goa">Goa</a>
+        <a href="#udaipur">Udaipur</a>
+        <a href="#hampi">Hampi</a>
+        <a href="#andaman">Andaman &amp; Nicobar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="wrap">
+      <p>India is home to incredibly diverse landscapes – snow-capped mountains, serene lakes, golden beaches, ancient ruins, and lush backwaters. This blog highlights seven of the most beautiful places that every traveler should experience at least once.</p>
+    </div>
+  </section>
+
+  <div id="places">
+
+    <article class="place" id="kashmir">
+      <div class="wrap place-grid">
+        <div class="place-media">
+          <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/0b8962a7-e40d-549b-8bb9-1ffd399555b5/d0b39b70-b254-5832-b617-9648a74627d6.jpg" alt="Snow-capped mountains and Dal Lake houseboats in Kashmir Valley">
+        </div>
+        <div class="place-body">
+          <p class="place-loc">Jammu &amp; Kashmir</p>
+          <h2>Kashmir Valley</h2>
+          <p>Known as "Paradise on Earth," the Kashmir Valley is famous for snow-capped peaks, serene lakes, and Mughal gardens.</p>
+          <div class="facts">
+            <div>
+              <h3>Main Attractions</h3>
+              <p>Dal Lake houseboats, Mughal Gardens (Shalimar, Nishat), Gulmarg meadows and gondola, Pahalgam valleys.</p>
+            </div>
+            <div>
+              <h3>Best Time to Visit</h3>
+              <p>March–August for pleasant weather; December–February for snow.</p>
+            </div>
+            <div>
+              <h3>How to Reach</h3>
+              <p>Fly to Srinagar; or train to Jammu Tawi then road to Srinagar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="place" id="ladakh">
+      <div class="wrap place-grid">
+        <div class="place-media">
+          <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/2d3cda29-f8d3-5770-9be8-6fb7987e1841/8371cd2b-c81e-5d31-b48a-63924ea95209.jpg" alt="Pangong Tso Lake and high-altitude desert landscape of Ladakh">
+        </div>
+        <div class="place-body">
+          <p class="place-loc">Union Territory</p>
+          <h2>Ladakh</h2>
+          <p>A high-altitude trans-Himalayan region with dramatic deserts, deep blue lakes, and ancient monasteries.</p>
+          <div class="facts">
+            <div>
+              <h3>Main Attractions</h3>
+              <p>Pangong Tso Lake, Nubra Valley sand dunes, Leh Palace, Khardung La Pass, Hemis and Thiksey monasteries.</p>
+            </div>
+            <div>
+              <h3>Best Time to Visit</h3>
+              <p>May–September when roads and passes are open.</p>
+            </div>
+            <div>
+              <h3>How to Reach</h3>
+              <p>Fly to Leh; or road via Manali–Leh or Srinagar–Leh highway (seasonal).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="place" id="kerala">
+      <div class="wrap place-grid">
+        <div class="place-media">
+          <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/099dcbd2-1acd-5708-b52f-2b7987f944b5/f62dddb2-1177-5032-b050-946cf6fa9fc7.jpg" alt="Houseboat cruising through Kerala's backwaters lined with coconut groves">
+        </div>
+        <div class="place-body">
+          <p class="place-loc">Kerala</p>
+          <h2>Kerala Backwaters</h2>
+          <p>A network of lagoons, lakes, and canals along the Malabar Coast, lined with paddy fields and coconut groves.</p>
+          <div class="facts">
+            <div>
+              <h3>Main Attractions</h3>
+              <p>Alleppey houseboat cruises, Kumarakom bird sanctuary, Vembanad Lake, traditional villages and Kathakali shows.</p>
+            </div>
+            <div>
+              <h3>Best Time to Visit</h3>
+              <p>September–March (post-monsoon and winter).</p>
+            </div>
+            <div>
+              <h3>How to Reach</h3>
+              <p>Fly to Kochi or Trivandrum; train to Alappuzha/Kottayam; then local boats/road.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="place" id="goa">
+      <div class="wrap place-grid">
+        <div class="place-media">
+          <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/64bd888c-8109-5330-9ee7-bbcc78f5742b/10f1907b-2567-564d-b1ad-0ade96af1083.jpg" alt="Golden beach and Portuguese-era architecture in Goa">
+        </div>
+        <div class="place-body">
+          <p class="place-loc">Goa</p>
+          <h2>Goa</h2>
+          <p>A coastal state known for golden beaches, Portuguese heritage, churches, forts, and a relaxed lifestyle.</p>
+          <div class="facts">
+            <div>
+              <h3>Main Attractions</h3>
+              <p>Baga, Calangute, Palolem beaches; Old Goa churches; Aguada and Chapora forts; Fontainhas Latin Quarter.</p>
+            </div>
+            <div>
+              <h3>Best Time to Visit</h3>
+              <p>November–February (cool, dry, ideal for beaches).</p>
+            </div>
+            <div>
+              <h3>How to Reach</h3>
+              <p>Fly to Goa (Dabolim/Manohar); train to Madgaon or Thivim; road from Mumbai, Pune, Bengaluru.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="place" id="udaipur">
+      <div class="wrap place-grid">
+        <div class="place-media">
+          <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/9d9d763c-db72-5d7a-b315-ea1a123fa0d1/718a238f-7192-5acb-a509-7834fb708c39.jpg" alt="Marble palaces reflected in Lake Pichola, Udaipur">
+        </div>
+        <div class="place-body">
+          <p class="place-loc">Rajasthan</p>
+          <h2>Udaipur</h2>
+          <p>The "City of Lakes," famous for white marble palaces reflected in Lake Pichola and Aravalli hills.</p>
+          <div class="facts">
+            <div>
+              <h3>Main Attractions</h3>
+              <p>City Palace, Lake Pichola boat rides, Jag Mandir, Jagdish Temple, evening light &amp; sound show.</p>
+            </div>
+            <div>
+              <h3>Best Time to Visit</h3>
+              <p>October–March (pleasant winter).</p>
+            </div>
+            <div>
+              <h3>How to Reach</h3>
+              <p>Fly to Udaipur; train to Udaipur City; road from Jaipur, Ahmedabad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="place" id="hampi">
+      <div class="wrap place-grid">
+        <div class="place-media">
+          <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/b7e87346-3a17-56b6-8233-41d64709aa33/c894f2dd-9572-52a8-8f5a-c9423401a674.jpg" alt="Ancient Vijayanagara Empire ruins among boulders in Hampi">
+        </div>
+        <div class="place-body">
+          <p class="place-loc">Karnataka</p>
+          <h2>Hampi</h2>
+          <p>UNESCO World Heritage Site with ruins of the Vijayanagara Empire set among giant boulders and paddy fields.</p>
+          <div class="facts">
+            <div>
+              <h3>Main Attractions</h3>
+              <p>Virupaksha Temple, Vittala Temple with stone chariot, Royal Centre, Hemakuta Hill sunset, Tungabhadra River coracle rides.</p>
+            </div>
+            <div>
+              <h3>Best Time to Visit</h3>
+              <p>October–February (cooler weather for exploring).</p>
+            </div>
+            <div>
+              <h3>How to Reach</h3>
+              <p>Nearest airports Hubballi/Belagavi then road; train to Hospet Junction then short drive to Hampi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="place" id="andaman">
+      <div class="wrap place-grid">
+        <div class="place-media">
+          <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/a7f28d4c-691d-5cc3-8926-23563e3670c8/30db5be6-ebc5-526b-b864-36273a699f7a.jpg" alt="Turquoise water and white-sand beach in the Andaman Islands">
+        </div>
+        <div class="place-body">
+          <p class="place-loc">Andaman &amp; Nicobar Islands</p>
+          <h2>Andaman &amp; Nicobar Islands</h2>
+          <p>Tropical islands in the Bay of Bengal with white-sand beaches, turquoise water, coral reefs, and dense forests.</p>
+          <div class="facts">
+            <div>
+              <h3>Main Attractions</h3>
+              <p>Radhanagar Beach (Havelock), Cellular Jail (Port Blair), Ross Island ruins, Neil Island beaches, scuba diving and snorkeling.</p>
+            </div>
+            <div>
+              <h3>Best Time to Visit</h3>
+              <p>November–May (clear skies, good visibility for water sports).</p>
+            </div>
+            <div>
+              <h3>How to Reach</h3>
+              <p>Fly to Port Blair from major Indian cities; or passenger ships from Chennai, Kolkata, Visakhapatnam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <p>Made with ❤️ for travel lovers</p>
+    <p><a href="mailto:hello@bharattrails.example">Contact / About</a></p>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('primaryNav');
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
